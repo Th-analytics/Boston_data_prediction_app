@@ -48,9 +48,8 @@ class Traning_Testing:
 
 
 """
-
 if __name__=='__main__':
     obj_t = Traning_Testing()
-    obj_t.main()
-    
+    obj_t.main(save="y")
+
 """
