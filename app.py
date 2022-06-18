@@ -6,6 +6,7 @@ app = Flask(__name__)
 global free_status, result_data
 free_status = True
 result_data = 'Processing'
+obj = Predict()
 
 class Threading:
 
@@ -61,11 +62,11 @@ def result():
     global result_data
     result_data = obj.result()
     if result_data != 'Processing...':
-        result_data = floor(result_data)
+        result_data = floor(result_data)*1000
     print("result_data: ", result_data)
     return render_template('result.html', re_data = result_data)
 
 
 if __name__=="__main__":
-    obj = Predict()
+
     app.run(port=8000,debug=True)
