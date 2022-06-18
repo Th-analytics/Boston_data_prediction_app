@@ -1,17 +1,22 @@
-from libraries import pd, np, plt
+from libraries import pd, np, plt, pickle, StandardScaler, sklearn
+from sklearn.datasets import load_boston
 
-
-class Eda:
-    data_file = 'dataset/Admission_Prediction.csv'
+class Predict:
+    model_file = 'Model_File/Admission_prediction.pickle'
 
     def __init__(self):
-        self.data = None
+        self.model = None
 
     def get_file(self):
-        dataf = pd.read_csv(self.data_file)
-        return dataf
+        boston = load_boston()
+        return pd.DataFrame(boston.data)
 
     def main(self):
-        data = self.get_file()
+        self.data =
 
+
+
+
+if __name__ == '__main__':
+    obj = Predict()
 
