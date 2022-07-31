@@ -1,6 +1,5 @@
 from libraries import pd, StandardScaler, train_test_split, LinearRegression, pickle
 
-
 class Traning_Testing:
 
     def __init__(self):
